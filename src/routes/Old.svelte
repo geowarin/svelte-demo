@@ -3,9 +3,8 @@
 
 	onMount(() => {
 
-		document.querySelectorAll('.compact.ranking li > .title').forEach((e => {
+		document.querySelectorAll('.ranking li > .title').forEach((e => {
 			const t = e.appendChild(e.cloneNode(true)) as HTMLSpanElement;
-			console.log(t);
 			t.style.pointerEvents = 'none';
 			e.addEventListener('mouseenter', (e => {
 				console.log('mouse enter!!!!!!!');
@@ -42,26 +41,36 @@
 </script>
 
 
-<section class="rankings">
-	<section class="top10">
-		<div class="compact ranking">
-			<ol>
-				{#each titles as title, index}
-					<li>
-						<span class="title">
-							<a href="https://club.steam250.com/app/620">
-								<img
-									alt="Logo"
-									class="lazy entered loaded"
-								/>
-							</a>
-							<a href="https://club.steam250.com/app/620">
-								<span>{title.name}</span>
-							</a>
-						</span>
-					</li>
-				{/each}
-			</ol>
-		</div>
-	</section>
-</section>
+<div class="ranking">
+	<ol>
+		{#each titles as title}
+			<li>
+				<div class="title">
+					<div>{title.name}</div>
+				</div>
+			</li>
+		{/each}
+	</ol>
+</div>
+
+<style>
+    .ranking {
+        max-width: 400px;
+    }
+
+    .ranking > ol {
+        display: flex;
+				justify-content: center;
+        flex-direction: column;
+        gap: 2px;
+        position: relative;
+        width: 100%;
+        padding: 4px;
+				list-style: none;
+    }
+
+    .ranking li > * {
+        position: relative;
+        z-index: 1
+    }
+</style>

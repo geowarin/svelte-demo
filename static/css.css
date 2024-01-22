@@ -1,60 +1,9 @@
-
-
-.ranking {
-    max-width: 400px;
-    line-height: 1
-}
-
-.ranking > ol {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    position: relative;
-    width: 100%;
-    padding: 4px;
-}
-
-.ranking li {
-    display: flex;
-    align-items: center;
-    --step: 0
-}
-
-.ranking li .title > :first-child {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    background: #181720 no-repeat 50%/contain
-}
-
-.ranking li img {
-    height: 36px;
-    min-width: 96px
-}
-
 .ranking li .title {
     display: flex;
     flex-grow: 1;
     background: #2d3a52;
-    text-shadow: 1px 1px 1px #1e1242;
-    transition: background-color 1s
-}
-
-.ranking li .title > :nth-child(2) {
-    flex-grow: 1;
-    line-height: 1;
-    align-self: center
-}
-
-.ranking li > * {
-    position: relative;
-    z-index: 1
-}
-
-.ranking li a {
-    color: #dfeaed;
-    text-decoration: none;
-    outline: none
+    transition: background-color 1s;
+    height: 36px;
 }
 
 /* Animation here: */
@@ -107,6 +56,10 @@
 /*    --drift: -0.18%;*/
 /*    --growth: 1.8%;*/
 /*    animation: compact-ranking-quing 1.7s .1s backwards*/
+/*}*/
+
+/*.ranking li {*/
+/*    --step: 0*/
 /*}*/
 
 /*.flat.ranking li > .title:before {*/
