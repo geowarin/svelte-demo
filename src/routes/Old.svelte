@@ -5,7 +5,10 @@
 
 		document.querySelectorAll('.ranking li > .title').forEach((e => {
 			const t = e.appendChild(e.cloneNode(true)) as HTMLSpanElement;
+			t.classList.remove("title");
+			t.classList.add("title2");
 			t.style.pointerEvents = 'none';
+			// const t = e as HTMLDivElement;
 			e.addEventListener('mouseenter', (e => {
 				console.log('mouse enter!!!!!!!');
 				t.classList.remove('animate');
@@ -54,23 +57,5 @@
 </div>
 
 <style>
-    .ranking {
-        max-width: 400px;
-    }
 
-    .ranking > ol {
-        display: flex;
-				justify-content: center;
-        flex-direction: column;
-        gap: 2px;
-        position: relative;
-        width: 100%;
-        padding: 4px;
-				list-style: none;
-    }
-
-    .ranking li > * {
-        position: relative;
-        z-index: 1
-    }
 </style>

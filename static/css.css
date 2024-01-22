@@ -1,4 +1,32 @@
+.ranking {
+    max-width: 400px;
+}
+
+.ranking > ol {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+    width: 100%;
+    padding: 4px;
+    list-style: none;
+}
+
+.ranking li > .title {
+    position: relative;
+    z-index: 1
+}
+
 .ranking li .title {
+    display: flex;
+    flex-grow: 1;
+    background: #2d3a52;
+    transition: background-color 1s;
+    height: 36px;
+}
+
+.ranking li .title2 {
     display: flex;
     flex-grow: 1;
     background: #2d3a52;
@@ -8,12 +36,12 @@
 
 /* Animation here: */
 
-.ranking li > .title:hover > .title, .ranking li > .title > .title:hover {
+.ranking li > .title:hover > .title2 {
     opacity: 1;
     transition: .1s
 }
 
-.ranking li > .title > .title {
+.ranking li > .title > .title2 {
     position: absolute;
     height: 100%;
     width: 100%;
