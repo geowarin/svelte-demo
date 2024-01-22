@@ -1,7 +1,5 @@
 <script>
-	import Old from './Old.svelte';
-	import New from './New.svelte';
+	import List from './List.svelte';
 </script>
 
-<New/>
-<Old/>
+<List/>

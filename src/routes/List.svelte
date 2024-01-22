@@ -1,5 +1,5 @@
 <script lang="ts">
-	
+
 	import ListItem from './ListItem.svelte';
 
 	const titles = [
@@ -24,10 +24,21 @@
 </script>
 
 
-<div class="ranking">
-	<ol>
-		{#each titles as title}
-			<ListItem name={title.name}/>
-		{/each}
-	</ol>
-</div>
+<ol>
+	{#each titles as title}
+		<ListItem name={title.name} />
+	{/each}
+</ol>
+
+<style>
+    ol {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2px;
+        position: relative;
+        width: 100%;
+        padding: 4px;
+        list-style: none;
+    }
+</style>
