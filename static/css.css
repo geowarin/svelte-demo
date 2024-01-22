@@ -1,0 +1,19 @@
+
+.compact.ranking li .animate {
+    animation: burst-out .4s ease-in forwards
+}
+
+.flat.compact.ranking li .animate {
+    animation: none
+}
+
+@keyframes burst-out {
+    0% {
+        -webkit-clip-path: circle(0);
+        clip-path: circle(0)
+    }
+    to {
+        -webkit-clip-path: circle(100%);
+        clip-path: circle(100%)
+    }
+}
