@@ -1,14 +1,16 @@
 <script>
 	import { marked } from 'marked';
+	import { Textarea } from 'flowbite-svelte';
+
 	let value = `Some words are *italic*, some are **bold**\n\n- lists\n- are\n- cool`;
 </script>
 
 <div class="grid">
 	input
-	<textarea bind:value></textarea>
+	<Textarea bind:value></Textarea>
 
 	output
-	<div>{@html marked(value)}</div>
+	<div class="list-disc">{@html marked(value)}</div>
 </div>
 
 <style>
@@ -18,10 +20,5 @@
         grid-template-rows: 1fr 1fr;
         grid-gap: 1em;
         height: 100%;
-    }
-
-    textarea {
-        flex: 1;
-        resize: none;
     }
 </style>

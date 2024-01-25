@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
+	import { Button } from 'flowbite-svelte';
 
 	const dispatch = createEventDispatcher();
 
@@ -10,6 +11,6 @@
 	}
 </script>
 
-<button on:click={sayHello}>
-	Click to say hello
-</button>
+<Button on:click={sayHello}>
+Click to say hello
+</Button>

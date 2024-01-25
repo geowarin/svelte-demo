@@ -1,8 +1,8 @@
 <script lang="ts">
-	import List from './List.svelte';
-	import Promise from './Promise.svelte';
-	import Dispatcher from './Dispatcher.svelte';
-	import Markdown from './Markdown.svelte';
+	import List from '../components/List.svelte';
+	import Promise from '../components/Promise.svelte';
+	import Dispatcher from '../components/Dispatcher.svelte';
+	import Markdown from '../components/Markdown.svelte';
 	
 	
 	let messages: {text: string}[] = []
