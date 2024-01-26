@@ -10,7 +10,7 @@
 	<Textarea bind:value></Textarea>
 
 	output
-	<div class="list-disc">{@html marked(value)}</div>
+	<div>{@html marked(value)}</div>
 </div>
 
 <style>
@@ -21,4 +21,9 @@
         grid-gap: 1em;
         height: 100%;
     }
+
+		/*:global(ul) {*/
+		/*		list-style: disc;*/
+		/*		margin-left: 2em;*/
+		/*}*/
 </style>

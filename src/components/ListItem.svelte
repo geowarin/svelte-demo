@@ -16,7 +16,7 @@
 	<div class="title" on:mouseover={mouseOver} role="listitem" on:focus={() => {}}>
 		<div>{name}</div>
 
-		<div class="title2 {animate ? 'animate': ''}" style="pointer-events: none" on:animationend={animationEnd}>
+		<div class="title2" class:animate style="pointer-events: none" on:animationend={animationEnd}>
 			<div>{name} :)</div>
 		</div>
 	</div>

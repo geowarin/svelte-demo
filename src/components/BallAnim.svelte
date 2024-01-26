@@ -63,7 +63,7 @@
 
     .controls {
         position: absolute;
-        top: 1em;
+        top: 64px;
         right: 1em;
         width: 200px;
         user-select: none;

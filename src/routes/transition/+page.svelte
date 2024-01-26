@@ -1,13 +1,14 @@
-<script>
+<script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { elasticOut } from 'svelte/easing';
+	import { onMount } from 'svelte';
 
-	let visible = true;
+	let visible = false;
 
-	function spin(node, { duration }) {
+	function spin(node: HTMLElement, { duration }: {duration: number}) {
 		return {
 			duration,
-			css: (t) => {
+			css: (t: number) => {
 				const eased = elasticOut(t);
 
 				return `
@@ -20,6 +21,10 @@
 			}
 		};
 	}
+
+	onMount(() => {
+		visible = true;
+	})
 </script>
 
 <label>
