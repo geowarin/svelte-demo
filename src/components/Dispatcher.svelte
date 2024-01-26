@@ -11,6 +11,6 @@
 	}
 </script>
 
-<Button on:click={sayHello}>
+<Button class="my-2" on:click={sayHello}>
 Click to say hello
 </Button>

@@ -1,11 +1,8 @@
-
-<script lang="ts">
-	import { fetchJoke } from '../utils/fetchJoke';
-
-	const promise = fetchJoke()
+<script>
+	import { fetchJoke } from '../../utils/fetchJoke';
 </script>
 
-{#await promise}
+{#await fetchJoke()}
 	<h3>Loading...</h3>
 {:then joke}
 	<p>{joke.value}</p>
