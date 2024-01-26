@@ -30,4 +30,13 @@
 	<NavItem link="/dispatch">
 		Dispatch
 	</NavItem>
+	<NavItem link="/markdown">
+		markdown
+	</NavItem>
+	<NavItem link="/store">
+		store
+	</NavItem>
+	<NavItem link="/derived">
+		derived store
+	</NavItem>
 </ul>

@@ -7,13 +7,13 @@
 
 <div class="grid">
 	input
-	<Textarea bind:value></Textarea>
+	<Textarea bind:value rows="12"></Textarea>
 
 	output
-	<div>{@html marked(value)}</div>
+	<div class="output">{@html marked(value)}</div>
 </div>
 
-<style>
+<style lang="postcss">
     .grid {
         display: grid;
         grid-template-columns: 5em 1fr;
@@ -22,8 +22,12 @@
         height: 100%;
     }
 
-		/*:global(ul) {*/
-		/*		list-style: disc;*/
-		/*		margin-left: 2em;*/
-		/*}*/
+    :global(.output ul) {
+        list-style: disc;
+        margin-left: 2em;
+    }
+
+    :global(.output h1) {
+        font-size: 2em;
+    }
 </style>

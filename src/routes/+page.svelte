@@ -1,5 +1,6 @@
 <script>
-	import Markdown from '../components/Markdown.svelte';
+	import { Heading } from 'flowbite-svelte';
 </script>
 
-<Markdown />
+<Heading>Hello LTT!</Heading>
+
