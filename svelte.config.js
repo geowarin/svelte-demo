@@ -22,7 +22,11 @@ const config = {
 			// fallback: '200.html', // may differ from host to host
 			precompress: false,
 			strict: true
-		})
+		}),
+
+		paths: {
+			base: process.env.NODE_ENV === 'production' ? '/svelte-demo' : ''
+		}
 	}
 };
 

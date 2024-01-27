@@ -1,12 +1,13 @@
 <script>
 	import { AddressCardSolid } from 'flowbite-svelte-icons';
+	import { base } from '$app/paths';
 
 	export let link = "#"
 </script>
 
 <li>
 	<a
-		href={link}
+		href="{base}/{link}"
 		class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
 	>
 		<slot name="icon">
